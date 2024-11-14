@@ -13,11 +13,11 @@ docker compose up
 
 # new terminal:
 cd bankApp
-docker run --rm -v ".:/app" -w "/app" node:23-alpine3.19 sh -c  "npm install"
-docker run --rm --network host  -v ".:/app" -w "/app" -e "PORT=3000" node:23-alpine3.19 sh -c  "npm run start"
+docker run --platform=linux/amd64 --rm -v ".:/app" -w "/app" node:23-alpine3.19 sh -c  "npm install"
+docker run --platform=linux/amd64 --rm --network host  -v ".:/app" -w "/app" -e "PORT=3000" node:23-alpine3.19 sh -c  "npm run start"
 
 # new terminal:
 cd insuranceApp
-docker run --rm -v ".:/app" -w "/app" node:23-alpine3.19 sh -c  "npm install"
-docker run --rm --network host  -v ".:/app" -w "/app" -e "PORT=3001" node:23-alpine3.19 sh -c  "npm run start"
+docker run --platform=linux/amd64 --rm -v ".:/app" -w "/app" node:23-alpine3.19 sh -c  "npm install"
+docker run --platform=linux/amd64 --rm --network host  -v ".:/app" -w "/app" -e "PORT=3001" node:23-alpine3.19 sh -c  "npm run start"
 ```
