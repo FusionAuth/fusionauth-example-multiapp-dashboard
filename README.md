@@ -1,14 +1,18 @@
-This repository holds code accompanying the FusionAuth application dashboard tutorial at https://fusionauth.io/docs/extend/examples/applicationDashboard.
+# Example Multi-Application Dashboard Using FusionAuth
+
+This repository holds code accompanying the FusionAuth application dashboard tutorial at https://fusionauth.io/docs/extend/examples/multi-application-dashboard.
 
 ## Project Contents
-This project contains a `docker-compose.yml` fuke and a `kickstart` directory to assist in running your own local FusionAuth server. The `bankApp` and `insuranceApp` directories contain the demonstration Node.js apps that use FusionAuth for authentication.
+
+This project contains a `docker-compose.yml` file and a `kickstart` directory to assist in running your own local FusionAuth server. The `bankApp` and `insuranceApp` directories contain the demonstration Node.js apps that use FusionAuth for authentication.
 
 ## Project Dependencies
+
 - Docker
 
-## How to run
+## How To Run
 
-Run the commands below in a terminal opened in this repository.
+Clone this repository and run the commands below in a terminal opened in this repository.
 
 ```sh
 docker compose up
