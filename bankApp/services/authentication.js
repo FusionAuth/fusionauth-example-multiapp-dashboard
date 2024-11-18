@@ -17,7 +17,7 @@ function setupPassport(app) {
 
   const authOptions = {
     authorizationURL: `${process.env.AUTH_URL}/authorize`,
-    tokenURL: `${process.env.AUTH_URL}/token`,
+    tokenURL: `${process.env.TOKEN_URL}/token`,
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     callbackURL: process.env.AUTH_CALLBACK_URL,
