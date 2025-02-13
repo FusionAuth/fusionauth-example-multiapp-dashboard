@@ -1,7 +1,6 @@
 services:
   bankApp:
     image: node:23-alpine3.19
-    platform: linux/amd64
     working_dir: /app
     volumes:
       - .:/app
