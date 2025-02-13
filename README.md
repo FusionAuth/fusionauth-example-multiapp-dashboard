@@ -19,13 +19,11 @@ docker compose up
 
 # new terminal:
 cd bankApp
-docker run --platform=linux/amd64 --rm -v ".:/app" -w "/app" node:23-alpine3.19 sh -c  "npm install"
-docker run --platform=linux/amd64 --rm --network faNetwork -p 3000:3000 -v ".:/app" -w "/app" -e "PORT=3000" node:23-alpine3.19 sh -c  "npm run start"
+docker compose up
 
 # new terminal:
 cd insuranceApp
-docker run --platform=linux/amd64 --rm -v ".:/app" -w "/app" node:23-alpine3.19 sh -c  "npm install"
-docker run --platform=linux/amd64 --rm --network faNetwork -p 3001:3001 -v ".:/app" -w "/app" -e "PORT=3001" node:23-alpine3.19 sh -c  "npm run start"
+docker compose up
 ```
 
 - Browse to FusionAuth at http://localhost:9011/admin and log in with `admin@example.com` and `password`.

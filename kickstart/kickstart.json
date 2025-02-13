@@ -78,7 +78,8 @@
             "logoutURL": "http://localhost:3000/logout",
             "enabledGrants": ["authorization_code", "refresh_token"],
             "debug": true,
-            "generateRefreshTokens": true
+            "generateRefreshTokens": true,
+            "requireRegistration": true
           },
           "jwtConfiguration": {
             "enabled": true,
@@ -105,7 +106,8 @@
             "logoutURL": "http://localhost:3001/logout",
             "enabledGrants": ["authorization_code", "refresh_token"],
             "debug": true,
-            "generateRefreshTokens": true
+            "generateRefreshTokens": true,
+            "requireRegistration": true
           },
           "jwtConfiguration": {
             "enabled": true,
