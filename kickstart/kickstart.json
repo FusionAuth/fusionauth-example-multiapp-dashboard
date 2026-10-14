@@ -22,7 +22,6 @@
     {
       "method": "POST",
       "url": "/api/key/generate/#{asymmetricKeyId}",
-      "tenantId": "#{defaultTenantId}",
       "body": {
         "key": {
           "algorithm": "RS256",
@@ -38,7 +37,11 @@
         "systemConfiguration": {
           "corsConfiguration": {
             "allowCredentials": true,
-            "allowedMethods": ["GET", "POST", "OPTIONS"],
+            "allowedMethods": [
+              "GET",
+              "POST",
+              "OPTIONS"
+            ],
             "allowedOrigins": [
               "http://localhost:3000",
               "http://localhost:3001"
@@ -60,7 +63,9 @@
         },
         "registration": {
           "applicationId": "#{FUSIONAUTH_APPLICATION_ID}",
-          "roles": ["admin"]
+          "roles": [
+            "admin"
+          ]
         }
       }
     },
@@ -72,11 +77,18 @@
         "application": {
           "name": "Changebank",
           "oauthConfiguration": {
-            "authorizedRedirectURLs": ["http://localhost:3000/auth/callback"],
-            "authorizedOriginURLs": ["http://localhost:3000"],
+            "authorizedRedirectURLs": [
+              "http://localhost:3000/auth/callback"
+            ],
+            "authorizedOriginURLs": [
+              "http://localhost:3000"
+            ],
             "clientSecret": "super-secret-secret-that-should-be-regenerated-for-production",
             "logoutURL": "http://localhost:3000/logout",
-            "enabledGrants": ["authorization_code", "refresh_token"],
+            "enabledGrants": [
+              "authorization_code",
+              "refresh_token"
+            ],
             "debug": true,
             "generateRefreshTokens": true,
             "requireRegistration": true
@@ -100,11 +112,18 @@
         "application": {
           "name": "Changeinsurance",
           "oauthConfiguration": {
-            "authorizedRedirectURLs": ["http://localhost:3001/auth/callback"],
-            "authorizedOriginURLs": ["http://localhost:3001"],
+            "authorizedRedirectURLs": [
+              "http://localhost:3001/auth/callback"
+            ],
+            "authorizedOriginURLs": [
+              "http://localhost:3001"
+            ],
             "clientSecret": "super-secret-secret-that-should-be-regenerated-for-production",
             "logoutURL": "http://localhost:3001/logout",
-            "enabledGrants": ["authorization_code", "refresh_token"],
+            "enabledGrants": [
+              "authorization_code",
+              "refresh_token"
+            ],
             "debug": true,
             "generateRefreshTokens": true,
             "requireRegistration": true
@@ -120,7 +139,6 @@
         }
       }
     },
-
     {
       "method": "POST",
       "url": "/api/user/registration/#{userUserId}",
@@ -146,7 +164,6 @@
         }
       }
     },
-
     {
       "method": "POST",
       "url": "/api/theme/#{newThemeId}",
